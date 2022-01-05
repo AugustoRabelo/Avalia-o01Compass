@@ -31,21 +31,21 @@ public class Aplicacao {
         Scanner scanner = new Scanner(System.in);
         List<Funcionario> funcionarios = new ArrayList<>();
 
-        System.out.println("Digite o nome do funcionario: ");
+        System.out.println("Digite o nome do funcionário: ");
         String nome = scanner.nextLine();
 
-        System.out.println("Digite o salario do funcionario: ");
+        System.out.println("Digite o salário do funcionário: ");
         double salario = scanner.nextDouble();
 
         Funcionario funcionario = new Funcionario(nome, salario);
         funcionarios.add(funcionario);
 
-        System.out.println("O salario do funcionario " + funcionario.getNome() + " é de: " + funcionario.getSalario());
-        System.out.println("A bonificacao do funcionario " + funcionario.getNome() + " é de: " + calculaBonificacao(funcionario));
+        System.out.println("O salário do funcionário " + funcionario.getNome() + " é de: " + funcionario.getSalario());
+        System.out.println("O salário atualizado do funcionário " + funcionario.getNome() + " é de: " + calculaBonificacao(funcionario));
 
-        System.out.println("Lista de funcionarios: ");
+        System.out.println("Lista de funcionários: ");
         for (Funcionario f : funcionarios) {
-            System.out.println("Nome: " + f.getNome() + " Salario: " + f.getSalario());
+            System.out.println("Nome: " + f.getNome() + " Salário: " + calculaBonificacao(funcionario));
         }
     }
 }
